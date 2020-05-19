@@ -1,0 +1,29 @@
+{
+  "name": "portfolio_00",
+  "version": "1.0.0",
+  "description": "portfolio_website_00",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomaszplewka/00_portfolio_00.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "portfolio"
+  ],
+  "author": "Tomasz Plewka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomaszplewka/00_portfolio_00/issues"
+  },
+  "homepage": "https://github.com/tomaszplewka/00_portfolio_00#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
