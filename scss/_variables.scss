@@ -1,0 +1,18 @@
+// Variables
+$website-width: 1000px;
+$primary-color: #f5cb5c;
+$secondary-color: #cfdbd5;
+$light-color: #e8eddf;
+$medium-color: #333533;
+$dark-color: #242423;
+$font-stack-h: "Cinzel Decorative", cursive;
+$font-stack-p: "Lobster Two", cursive;
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
