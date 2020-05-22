@@ -24,6 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
     <title>My Portfolio | Welcome</title>
   </head>
@@ -31,31 +32,39 @@
     <!-- Header -->
     <header id="home-header">
       <nav id="home-nav">
-        <img src="./img/home-my-photo.jpg" alt="My Photo" />
+        <img src="./img/home-bio-photo.jpg" alt="My Photo" />
         <ul>
           <li>
-            <div class="home-tab current">
-              <i class="fas fa-home"></i>
-              <a href="#">Home</a>
-            </div>
+            <a href="#home-header" class="current">
+              <div class="home-tab">
+                <i class="fas fa-home"></i>
+                Home
+              </div>
+            </a>
           </li>
           <li>
-            <div class="home-tab">
-              <i class="fas fa-user-secret"></i>
-              <a href="#">About Me</a>
-            </div>
+            <a href="#about-me-a">
+              <div class="home-tab">
+                <i class="fas fa-user-secret"></i>
+                About Me
+              </div>
+            </a>
           </li>
           <li>
-            <div class="home-tab">
-              <i class="fas fa-code-branch"></i>
-              <a href="#">Work</a>
-            </div>
+            <a href="#work-a">
+              <div class="home-tab">
+                <i class="fas fa-code-branch"></i>
+                Work
+              </div>
+            </a>
           </li>
           <li>
-            <div class="home-tab">
-              <i class="fas fa-envelope"></i>
-              <a href="#">Contact Me</a>
-            </div>
+            <a href="#contact-a">
+              <div class="home-tab">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+              </div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -68,7 +77,7 @@
             <p class="lead">
               I specialize in web development
             </p>
-            <a href="#" class="btn-light">View My Work</a>
+            <a href="#work-a" class="btn-light">View My Work</a>
           </div>
         </div>
         <div class="header-content-bg-imgs">
@@ -81,46 +90,52 @@
     </header>
 
     <!-- Section: About Me -->
-    <section id="about-me" class="text-center py-3">
+    <section id="about-me-a" class="text-center py-3">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="title-section">About Me</h2>
         <div class="bottom-line"></div>
         <p class="lead">
           Let me tell you a little about myself and what I do...
         </p>
         <div class="about-info">
-          <img src="" alt="About Me Photo" class="bio-image" />
+          <img src="./img/home-my-photo.jpg" alt="About Me Photo" class="bio-image" />
           <div class="bio bg-light">
-            <h4>Your Project Is In Safe Hands</h4>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Perspiciatis nostrum, eaque velit ipsam facilis sed, quisquam
-              nesciunt unde nihil voluptatum commodi consequuntur molestiae?
-              Fugiat, perspiciatis reprehenderit. Architecto delectus vitae
-              deserunt!
-            </p>
+            <ul class="text">
+              <li>
+                <i class="fas fa-check-double"></i>
+                <p>
+                  Self-study Programmer with a strong knowledge of Data Analysis and Visualization Tools such as Python and R Programming Languages
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-check-double"></i>
+                <p>
+                  Critical Thinker and Problem Solving individual Passionate about Data Science and Machine Learning concepts
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-check-double"></i>
+                <p>
+                  Happy to deliver volunteering services within University Campus and outside Communities
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
-        <h2 class="section-title">I Specialize In</h2>
+      </div>
+    </section>
+    <section id="about-me-b" class="text-center py-3">
+      <div class="container">
+        <h2 class="title-section">I Specialize In</h2>
         <div class="bottom-line"></div>
         <p class="lead">
-          Photography as well as creating digital masterpieces and UI/UX layouts
-          for websites and mobile applications
+          Web Development as well as creating UI/UX layouts for websites and mobile applications
         </p>
         <div class="specials">
           <div>
-            <i class="fas fa-file-alt fa-2x"></i>
-            <h3>Concepting</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-              molestias repellat quibusdam adipisci quas sed ullam accusantium
-              aliquam numquam quidem.
-            </p>
-          </div>
-          <div>
             <i class="fas fa-desktop fa-2x"></i>
-            <h3>UI/UX</h3>
-            <p>
+            <h3 class="title-subsection">UI/UX</h3>
+            <p class="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
               molestias repellat quibusdam adipisci quas sed ullam accusantium
               aliquam numquam quidem.
@@ -128,8 +143,8 @@
           </div>
           <div>
             <i class="fas fa-object-ungroup fa-2x"></i>
-            <h3>Visual Design</h3>
-            <p>
+            <h3 class="title-subsection">Visual Design</h3>
+            <p class="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
               molestias repellat quibusdam adipisci quas sed ullam accusantium
               aliquam numquam quidem.
@@ -137,8 +152,8 @@
           </div>
           <div>
             <i class="fas fa-thumbs-up fa-2x"></i>
-            <h3>Interaction</h3>
-            <p>
+            <h3 class="title-subsection">Interaction</h3>
+            <p class="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
               molestias repellat quibusdam adipisci quas sed ullam accusantium
               aliquam numquam quidem.
@@ -146,190 +161,138 @@
           </div>
         </div>
       </div>
+      <h1 class="py-3 my-2 bg-main">Your Project Is In Safe Hands</h1>
     </section>
-    <section id="home-b" class="text-center py-2">
+    <section id="about-me-c" class="text-center">
       <div class="stats">
         <div>
           <ul>
-            <li><i class="fas fa-users fa-3x"></i></li>
-            <li class="stats-title">Clients</li>
-            <li class="stats-number">100</li>
+            <li><i class="fas fa-users"></i></li>
+            <li class="title-stats">Clients</li>
+            <li class="stats-number">TBC</li>
           </ul>
         </div>
         <div>
           <ul>
-            <li><i class="fas fa-award fa-3x"></i></li>
-            <li class="stats-title">Awards</li>
-            <li class="stats-number">3</li>
+            <li><i class="fas fa-hourglass-start"></i></li>
+            <li class="title-stats">Hours Worked</li>
+            <li class="stats-number">&gt; 600</li>
           </ul>
         </div>
         <div>
           <ul>
-            <li><i class="fas fa-hourglass-start fa-3x"></i></li>
-            <li class="stats-title">Hours Worked</li>
-            <li class="stats-number">3500</li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li><i class="fas fa-code-branch fa-3x"></i></li>
-            <li class="stats-title">Projects Completed</li>
-            <li class="stats-number">135</li>
+            <li><i class="fas fa-project-diagram"></i></i></li>
+            <li class="title-stats">Projects Completed</li>
+            <li class="stats-number">5</li>
           </ul>
         </div>
       </div>
     </section>
-    <section id="about-b" class="bg-dark py-3">
+    <section id="about-me-d" class="bg-dark py-3">
       <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="title-section">Technical Skills</h2>
         <div class="bottom-line"></div>
-        <h4>Photography:</h4>
+        <h4 class="title-skills">HTML & CSS:</h4>
         <div class="progress">
-          <div style="width: 100%;"></div>
+          <div style="width: 90%;"></div>
         </div>
-        <h4>Adobe Photoshop:</h4>
-        <div class="progress">
-          <div style="width: 80%;"></div>
-        </div>
-        <h4>Adobe Illustrator:</h4>
+        <h4 class="title-skills">UI/UX:</h4>
         <div class="progress">
           <div style="width: 70%;"></div>
         </div>
-        <h4>HTML & CSS:</h4>
+        <h4 class="title-skills">Bootstrap:</h4>
         <div class="progress">
-          <div style="width: 100%;"></div>
+          <div style="width: 50%;"></div>
         </div>
-        <h4>Wordpress:</h4>
+        <h4 class="title-skills">Wordpress:</h4>
         <div class="progress">
-          <div style="width: 80%;"></div>
-        </div>
-        <h4>Magento:</h4>
-        <div class="progress">
-          <div style="width: 70%;"></div>
+          <div style="width: 50%;"></div>
         </div>
       </div>
     </section>
 
     <!-- Section C: Logos -->
-    <section id="about-c" class="py-4 bg-light">
+    <section id="about-me-e" class="py-4 bg-light">
       <div class="container">
         <div class="about-logos">
-          <img src="img/about-logos/logo-envato.png" alt="" />
-          <img src="img/about-logos/logo-wordpress.png" alt="" />
-          <img src="img/about-logos/logo-woocommerce.png" alt="" />
-          <img src="img/about-logos/logo-magento.png" alt="" />
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fas fa-mobile-alt"></i>
+          <i class="fab fa-wordpress"></i>
         </div>
       </div>
     </section>
     <!-- Section A: Gallery -->
     <section id="work-a" class="text-center py-3">
       <div class="container">
-        <h2 class="section-title">My Work</h2>
+        <h2 class="title-section">My Work</h2>
         <div class="bottom-line"></div>
         <p class="lead">
-          Check out some of my projects
+          Check out my projects
         </p>
         <div class="items">
           <div class="item">
             <div class="item-image">
-              <img src="img/items/item1.png" alt="" />
+              <img src="./img/work-portfolio-1.PNG" alt="" />
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Great Gradients</h2>
+                <p class="item-text-category">Responsive Website</p>
+                <h2 class="item-text-title">Squash Center</h2>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="item-image">
-              <img src="img/items/item2.png" alt="" />
+              <img src="./img/work-portfolio-2.PNG" alt="" />
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">UI/UX</p>
-                <h2 class="item-text-title">World Experience</h2>
+                <p class="item-text-category">Responsive Website</p>
+                <h2 class="item-text-title">Board Game Cafe</h2>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="item-image">
-              <img src="img/items/item3.png" alt="" />
+              <img src="./img/work-portfolio-3.PNG" alt="" />
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">Photography & Design</p>
-                <h2 class="item-text-title">Vanishing</h2>
+                <p class="item-text-category">Landing Page</p>
+                <h2 class="item-text-title">Student Chapter</h2>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="item-image">
-              <img src="img/items/item4.png" alt="" />
+              <img src="./img/work-portfolio-4.PNG" alt="" />
             </div>
             <div class="item-text">
               <div class="item-text-wrap">
-                <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Gap INC</h2>
+                <p class="item-text-category">Responsive Website</p>
+                <h2 class="item-text-title">The Cafe</h2>
               </div>
             </div>
           </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item5.png" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Mobile UI Design</p>
-                <h2 class="item-text-title">Face THe Experience</h2>
-              </div>
-            </div>
+      </div>
+    </section>
+    <!-- Section A: Contact Form -->
+    <section id="contact-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="title-section">Contact Me</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">Here is how you can reach me</p>
+        <form>
+          <div class="text-fields">
+            <input type="text" class="text-input name-input" placeholder="Name" name="name" />
+            <input type="text" class="text-input subject-input" placeholder="Subject" name="subject" />
+            <input type="email" class="text-input email-input" placeholder="Email Address" name="email" />
+            <input type="text" class="text-input phone-input" placeholder="Phone Number" name="phone" />
+            <textarea class="text-input message-input" placeholder="Enter Message" name="message"></textarea>
           </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item6.png" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Design Concept</p>
-                <h2 class="item-text-title">Bezier Curves</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item7.png" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Photography</p>
-                <h2 class="item-text-title">Dock Ponder</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item8.png" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Web Applications</p>
-                <h2 class="item-text-title">Restaurant App</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src="img/items/item9.png" alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Social Network Concept</p>
-                <h2 class="item-text-title">FriendFeed</h2>
-              </div>
-            </div>
-          </div>
-        </div>
+          <button type="submit" class="btn-dark">Submit</button>
+        </form>
       </div>
     </section>
     <!-- Section B: Contact Info -->
@@ -337,24 +300,23 @@
       <div class="container">
         <div class="contact-info">
           <div>
-            <i class="fas fa-envelope fa-2x"></i>
-            <h3>Email</h3>
-            <p>john@something.com</p>
+            <i class="fas fa-envelope"></i>
+            <h3 class="title-subsection">Email</h3>
+            <p class="text">tomasz.plewka66@gmail.com</p>
           </div>
           <div>
-            <i class="fas fa-phone fa-2x"></i>
-            <h3>Phone</h3>
-            <p>(555) 555-5555</p>
+            <i class="fas fa-phone"></i>
+            <h3 class="title-subsection">Phone</h3>
+            <p class="text">403-472-3094</p>
           </div>
           <div>
-            <i class="fas fa-address-card fa-2x"></i>
-            <h3>Address</h3>
-            <p>50 Main st, Boston MA</p>
+            <i class="fas fa-address-card"></i>
+            <h3 class="title-subsection">Address</h3>
+            <p class="text">Calgary, AB, Canada</p>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Section C: Tagline -->
     <section id="contact-c" class="bg-main py-4">
       <div class="container">
@@ -364,11 +326,10 @@
 
     <footer id="main-footer">
       <div class="footer-content container">
-        <p>Copyright &copy; 2019. All Rights Reserved</p>
+        <p class="text">Copyright &copy; 2020. All Rights Reserved</p>
         <div class="social">
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-github"></i>
           <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
           <i class="fab fa-linkedin"></i>
         </div>
       </div>

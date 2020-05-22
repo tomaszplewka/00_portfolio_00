@@ -6,13 +6,14 @@ $light-color: #e8eddf;
 $medium-color: #333533;
 $dark-color: #242423;
 $font-stack-h: "Cinzel Decorative", cursive;
-$font-stack-p: "Lobster Two", cursive;
+$font-stack-lead: "Lobster Two", cursive;
+$font-stack-text: 'Dosis', sans-serif;
 
 // Set Text Color
 @function set-text-color($color) {
-  @if (lightness($color) > 50) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
+	@if (lightness($color) > 50) {
+		@return #000;
+	} @else {
+		@return #fff;
+	}
 }

@@ -1,0 +1,107 @@
+.items {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item {
+	position: relative;
+	background: $primary-color;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		background: inherit;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		width: 75%;
+		height: 100%;
+		border-radius: 50%;
+		transform: scale(1) translateX(-75%) translateY(75%) rotate(0deg);
+		transition: all 0.5s ease-out;
+	}
+
+	// Bring in main color overlay
+	&:hover:after {
+		opacity: 1;
+		transform: scale(1) translateX(-10%) translateY(20%) rotate(0deg);
+	}
+
+	// Scale image on hover
+	&:hover &-image {
+		transform: scale(1);
+		filter: grayscale(100%);
+	}
+
+	// Bring in text on hover
+	&:hover &-text {
+		opacity: 1;
+		transform: translateX(0);
+		transform: translateY(0);
+	}
+
+	&-image {
+		height: auto;
+		transform: scale(1.2);
+		display: block;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	&-image:before {
+		content: '';
+		display: block;
+		padding-top: 75%;
+		overflow: hidden;
+	}
+
+	&-image img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		line-height: 0;
+	}
+
+	&-text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		opacity: 0;
+		text-align: center;
+		z-index: 1;
+		color: #fff;
+		transform: translate3d(-20%, 20%, 0);
+		transition: all 0.4s ease-out;
+	}
+
+	&-text-wrap {
+		position: absolute;
+		width: 65%;
+		top: 69%;
+		transform: translateY(-50%);
+	}
+
+	&-text-title {
+		font-size: 2rem;
+		padding: 0 1rem;
+		margin: 5px 0 0 0;
+		font-family: $font-stack-h;
+		color: set-text-color($primary-color);
+	}
+
+	&-text-category {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		opacity: 0.7;
+		margin: 0;
+		font-family: $font-stack-h;
+		color: set-text-color($primary-color);
+	}
+}
