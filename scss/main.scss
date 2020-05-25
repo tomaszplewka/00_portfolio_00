@@ -81,15 +81,15 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-      align-items: center;
+			align-items: center;
 
 			&-wrapper {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				padding: 4rem;
-        background-color: $dark-color;
+				padding: 4rem 6rem;
+				background-color: $dark-color;
 
 				h1 {
 					font-size: 4rem;
@@ -106,14 +106,14 @@
 			grid-gap: 2rem;
 			padding: 2rem;
 			height: 100%;
-      background-color: $dark-color;
+			background-color: $dark-color;
 
 			img {
-        display: block;
+				display: block;
 				width: 100%;
 				height: 100%;
-        object-fit: cover;
-      }
+				object-fit: cover;
+			}
 		}
 	}
 }
@@ -129,6 +129,7 @@
 		.bio-image {
 			grid-area: bioimage;
 			width: 100%;
+			object-fit: cover;
 			max-height: 250px;
 		}
 		.bio {
@@ -166,6 +167,7 @@
 		}
 		h1 {
 			font-size: 4rem;
+			padding: 3rem;
 			margin-bottom: 0;
 		}
 	}
@@ -300,6 +302,7 @@
 		height: 7rem;
 		align-items: center;
 		i {
+			color: set-text-color($dark-color);
 			font-size: 2rem;
 			margin-right: 1rem;
 			border: 2px #fff solid;
@@ -312,5 +315,6 @@
 		}
 	}
 }
-// Import Media Queries
-// @import 'media';
+
+//Import Media Queries
+@import 'media';
