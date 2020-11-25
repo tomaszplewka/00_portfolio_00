@@ -137,6 +137,19 @@ input[class^="btn-"]:hover {
   text-align: center;
   letter-spacing: 1px; }
 
+.social i {
+  color: #fff;
+  font-size: 2rem;
+  margin-right: 1rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.5s; }
+  .social i:hover {
+    background: #f5cb5c;
+    border-radius: 0%; }
+
 .items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -227,39 +240,51 @@ input[class^="btn-"]:hover {
     width: 150px;
     height: 100%;
     background-color: #333533;
-    color: #fff; }
-    #home-header nav img {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    #home-header nav .signature-wrapper {
+      padding: 1rem 0; }
+      #home-header nav .signature-wrapper .signature {
+        font-family: "Lobster Two", cursive;
+        font-size: 2.5rem;
+        padding: 0 0.75rem;
+        text-align: center;
+        color: #f5cb5c; }
+        #home-header nav .signature-wrapper .signature-top {
+          margin-bottom: -1.75rem; }
+    #home-header nav ul li a {
       display: block;
       width: 100%;
-      height: 200px;
-      object-fit: cover;
-      position: relative;
-      opacity: 0.5; }
-    #home-header nav ul {
-      display: flex;
-      flex-direction: column; }
-      #home-header nav ul li a {
-        display: block;
-        width: 100%;
-        height: 100%; }
-        #home-header nav ul li a:hover {
-          background-color: #242423; }
-        #home-header nav ul li a.current {
-          background-color: #242423; }
-          #home-header nav ul li a.current:hover,
-          #home-header nav ul li a.current:hover .home-tab {
-            background-color: #e8eddf;
-            color: #000; }
-        #home-header nav ul li a .home-tab {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem 0;
-          font-size: 2rem;
-          color: #fff; }
-          #home-header nav ul li a .home-tab i {
-            font-size: 3rem; }
+      height: 100%;
+      transition: all 0.5s; }
+      #home-header nav ul li a:hover {
+        background-color: #242423;
+        transition: all 0.5s; }
+        #home-header nav ul li a:hover:hover,
+        #home-header nav ul li a:hover:hover .home-tab {
+          background-color: #e8eddf;
+          color: #000;
+          transition: all 0.5s; }
+      #home-header nav ul li a .home-tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+        font-size: 2rem;
+        color: #fff; }
+        #home-header nav ul li a .home-tab i {
+          font-size: 3rem; }
+    #home-header nav ul .bottom-line {
+      margin: auto;
+      width: 8rem; }
+    #home-header nav .social {
+      margin: auto; }
+      #home-header nav .social i {
+        font-size: 1.5rem;
+        margin: 0 0.4rem; }
   #home-header .header-content {
     margin-left: 150px;
     height: 100%;
@@ -444,16 +469,6 @@ input[class^="btn-"]:hover {
     justify-content: space-between;
     height: 7rem;
     align-items: center; }
-    #main-footer .footer-content i {
-      color: #fff;
-      font-size: 2rem;
-      margin-right: 1rem;
-      border: 2px #fff solid;
-      border-radius: 50%;
-      text-align: center;
-      padding: 1rem; }
-      #main-footer .footer-content i:hover {
-        background: #f5cb5c; }
 
 @media screen and (max-width: 1000px) {
   #home-header {
@@ -487,10 +502,12 @@ input[class^="btn-"]:hover {
     #home-header nav {
       width: 100%;
       height: auto;
-      z-index: 10; }
-      #home-header nav img {
+      z-index: 10;
+      display: block; }
+      #home-header nav .signature-wrapper {
         display: none; }
       #home-header nav ul {
+        display: flex;
         flex-direction: row; }
         #home-header nav ul li {
           flex: 1; }
@@ -498,6 +515,10 @@ input[class^="btn-"]:hover {
             padding: 1rem 0 !important; }
             #home-header nav ul li .home-tab i {
               display: none; }
+        #home-header nav ul .bottom-line {
+          display: none; }
+      #home-header nav .social {
+        display: none; }
     #home-header .header-content {
       margin-left: 0; }
       #home-header .header-content-bg-imgs {

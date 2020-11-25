@@ -14,37 +14,44 @@
 		height: 100%;
 		background-color: $medium-color;
 		color: set-text-color($medium-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
-		img {
-			display: block;
-			width: 100%;
-			height: 200px;
-			object-fit: cover;
-			position: relative;
-			opacity: 0.5;
+		.signature-wrapper {
+			padding: 1rem 0;
+
+			.signature {
+				font-family: $font-stack-lead;
+				font-size: 2.5rem;
+				padding: 0 0.75rem;
+				text-align: center;
+				color: $primary-color;
+	
+				&-top {
+					margin-bottom: -1.75rem;
+				}
+			}
 		}
 
 		ul {
-			display: flex;
-			flex-direction: column;
 
 			li {
 				a {
 					display: block;
 					width: 100%;
 					height: 100%;
-
+					transition: all 0.5s;
+					
 					&:hover {
 						background-color: $dark-color;
-					}
-
-					&.current {
-						background-color: $dark-color;
-
+						transition: all 0.5s;
+						
 						&:hover,
 						&:hover .home-tab {
 							background-color: $light-color;
 							color: set-text-color($light-color);
+							transition: all 0.5s;
 						}
 					}
 
@@ -62,6 +69,20 @@
 						}
 					}
 				}
+			}
+
+			.bottom-line {
+				margin: auto;
+				width: 8rem;
+			}
+		}
+
+		.social {
+			margin: auto;
+
+			i {
+				font-size: 1.5rem;
+				margin: 0 0.4rem;
 			}
 		}
 	}
@@ -296,23 +317,12 @@
 	background: $dark-color;
 	color: set-text-color($dark-color);
 	height: 7rem;
+
 	.footer-content {
 		display: flex;
 		justify-content: space-between;
 		height: 7rem;
 		align-items: center;
-		i {
-			color: set-text-color($dark-color);
-			font-size: 2rem;
-			margin-right: 1rem;
-			border: 2px #fff solid;
-			border-radius: 50%;
-			text-align: center;
-			padding: 1rem;
-			&:hover {
-				background: $primary-color;
-			}
-		}
 	}
 }
 

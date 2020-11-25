@@ -155,3 +155,22 @@ input[class^="btn-"]:hover {
 	text-align: center;
 	letter-spacing: 1px;
 }
+
+.social {
+
+	i {
+		color: set-text-color($dark-color);
+		font-size: 2rem;
+		margin-right: 1rem;
+		border: 2px #fff solid;
+		border-radius: 50%;
+		text-align: center;
+		padding: 1rem;
+		transition: all 0.5s;
+		
+		&:hover {
+			background: $primary-color;
+			border-radius: 0%;
+		}
+	}
+}
