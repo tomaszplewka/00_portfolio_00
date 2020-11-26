@@ -63,6 +63,7 @@
 						padding: 2rem 0;
 						font-size: 2rem;
 						color: set-text-color($medium-color);
+						font-family: $font-stack-lead;
 
 						i {
 							font-size: 3rem;
@@ -103,6 +104,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			z-index: 10;
 
 			&-wrapper {
 				display: flex;
@@ -110,24 +112,46 @@
 				justify-content: center;
 				align-items: center;
 				padding: 4rem 6rem;
-				background-color: $dark-color;
 
 				h1 {
 					font-size: 4rem;
 					line-height: 1.2;
-					font-family: $font-stack-h;
+					font-family: $font-stack-text;
+					transform: perspective(10cm) rotateX(-15deg) rotateY(30deg);
+					transition: all 0.5s;
+
+					&:hover{
+						transform: perspective(0cm) rotateX(0deg) rotateY(0deg) translateX(-100px);
+					}
+				}
+
+				p {
+					transform: perspective(10cm) rotateX(-15deg) rotateY(30deg);
+					transition: all 0.5s;
+
+					&:hover{
+						transform: perspective(0cm) rotateX(0deg) rotateY(0deg) translateX(100px);
+					}
+				}
+
+				a {
+					color: set-text-color($dark-color);
+					// transform: perspective(10cm) rotateX(-15deg) rotateY(30deg);
+					margin-top: 2rem;
+					transition: all 0.5s;
+
+					&:hover{
+						transform: perspective(0cm) rotateX(0deg) rotateY(0deg);
+					}
 				}
 			}
 		}
 
-		&-bg-imgs {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat(2, 1fr);
-			grid-gap: 2rem;
-			padding: 2rem;
+		&-bg-img {
 			height: 100%;
-			background-color: $dark-color;
+			background: url(../img/showcase.jpg) no-repeat center center/cover;
+			position: relative;
+			background-attachment: fixed;
 
 			img {
 				display: block;
@@ -135,39 +159,70 @@
 				height: 100%;
 				object-fit: cover;
 			}
+
+			&::before {
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba($color: #000000, $alpha: 0.1);
+			}
 		}
 	}
 }
 #about {
+	
 	&-me-a {
 		margin-left: 150px;
+
 		.about-info {
+			padding-bottom: 2rem;
+			height: 275px;
 			display: grid;
 			grid-template-areas: 'bioimage bio bio';
-			grid-gap: 1.2rem;
-		}
-		// Grid Area
-		.bio-image {
-			grid-area: bioimage;
-			width: 100%;
-			object-fit: cover;
-			max-height: 250px;
-		}
-		.bio {
-			grid-area: bio;
-			border-left: 3px solid $primary-color;
-			padding: 0.8rem;
-			li {
-				display: flex;
-				align-items: center;
-				margin-bottom: 1rem;
-				i {
-					font-size: 3rem;
-					margin-right: 1rem;
-				}
-				p {
-					font-size: 1.5rem;
-					text-align: left;
+
+			// Grid Area
+			.bio-image {
+				grid-area: bioimage;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				max-height: 275px;
+				border-top-left-radius: 1rem;
+				border-bottom-left-radius: 1rem;
+				box-shadow: -10px 10px 10px $dark-color;
+			}
+			.bio {
+				height: 100%;
+				max-height: 275px;
+				grid-area: bio;
+				border-left: 3px solid $primary-color;
+				padding: 0.5rem;
+				border-top-right-radius: 1rem;
+				border-bottom-right-radius: 1rem;
+				box-shadow: 10px -10px 10px $dark-color;
+
+				ul {
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					li {
+						display: flex;
+						align-items: center;
+						margin-bottom: 1rem;
+						i {
+							font-size: 3rem;
+							margin-right: 1rem;
+						}
+						p {
+							font-size: 1.6rem;
+							text-align: left;
+						}
+					}
 				}
 			}
 		}
@@ -175,28 +230,40 @@
 	&-me-b {
 		margin-left: 150px;
 		padding-bottom: 0;
+
 		.specials {
 			margin-top: 5rem;
 			display: grid;
 			grid-gap: 1rem;
 			grid-template-columns: repeat(3, 1fr);
+
 			i {
-				font-size: 3rem;
+				font-size: 5rem;
 				color: $primary-color;
 				padding-bottom: 1rem;
+				transition: all 0.5s;
+
+				&:hover {
+					transform: rotate(360deg);
+				}
 			}
 		}
-		h1 {
-			font-size: 4rem;
-			padding: 3rem;
+		h2 {
+			text-align: center;
+			font-size: 3rem;
+			letter-spacing: 2px;
 			margin-bottom: 0;
+			font-family: $font-stack-h;
+			font-weight: 300;
 		}
 	}
 	&-me-c {
 		margin-left: 150px;
+
 		.stats {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+
 			li {
 				line-height: 2.5em;
 				i {
@@ -205,9 +272,10 @@
 				&.stats-number {
 					font-size: 3rem;
 					font-weight: bold;
-					font-family: $font-stack-h;
+					font-family: $font-stack-text;
 				}
 			}
+
 			div {
 				padding: 3rem 0;
 				&:nth-child(odd) {
@@ -215,36 +283,32 @@
 				}
 				&:nth-child(even) {
 					background: $light-color;
+					color: set-text-color($light-color);
 				}
 			}
 		}
 	}
 	&-me-d {
 		margin-left: 150px;
-		.progress {
-			overflow: hidden;
-			height: 20px;
-			background: $medium-color;
-			border-radius: 5px;
-			margin-bottom: 0.6rem;
-			div {
-				height: 100%;
-				color: #fff;
-				text-align: center;
-				background: $primary-color;
-			}
-		}
-	}
-	&-me-e {
-		margin-left: 150px;
+
 		.about-logos {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			grid-gap: 2rem;
-			i {
-				font-size: 6rem;
-				text-align: center;
-				opacity: 0.5;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.logo {
+				padding: 1.5rem;
+				margin-bottom: 2rem;
+
+				img {
+					width: 75px;
+					filter: invert(100%);
+					transition: all 0.5s;
+					
+					&:hover {
+						filter: invert(0%);
+					}
+				}
 			}
 		}
 	}
@@ -255,8 +319,10 @@
 	}
 }
 #contact {
+
 	&-a {
 		margin-left: 150px;
+
 		.text-fields {
 			display: grid;
 			grid-template-areas: 'name email' 'subject phone' 'message message';
@@ -292,6 +358,7 @@
 	}
 	&-b {
 		margin-left: 150px;
+
 		.contact-info {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
@@ -304,10 +371,13 @@
 	}
 	&-c {
 		margin-left: 150px;
-		h1 {
+
+		h2 {
 			text-align: center;
-			font-size: 4rem;
-			letter-spacing: 3px;
+			font-size: 3rem;
+			letter-spacing: 2px;
+			font-family: $font-stack-h;
+			font-weight: 300;
 		}
 	}
 }
