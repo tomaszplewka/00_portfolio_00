@@ -20,23 +20,20 @@
 		width: 75%;
 		height: 100%;
 		border-radius: 50%;
-		transform: scale(1) translateX(-75%) translateY(75%) rotate(0deg);
+		transform: scale(1) translateX(-75%) translateY(75%);
 		transition: all 0.5s ease-out;
 	}
 
-	// Bring in main color overlay
 	&:hover:after {
 		opacity: 1;
-		transform: scale(1) translateX(-10%) translateY(20%) rotate(0deg);
+		transform: scale(1) translateX(-10%) translateY(20%);
 	}
 
-	// Scale image on hover
 	&:hover &-image {
 		transform: scale(1.2);
 		filter: grayscale(100%);
 	}
 
-	// Bring in text on hover
 	&:hover &-text {
 		opacity: 1;
 		transform: translateX(0);

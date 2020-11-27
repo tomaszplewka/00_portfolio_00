@@ -79,7 +79,7 @@
 		}
 
 		.social {
-			margin: auto;
+			margin: 1.5rem auto;
 
 			i {
 				font-size: 1.5rem;
@@ -117,32 +117,28 @@
 					font-size: 4rem;
 					line-height: 1.2;
 					font-family: $font-stack-text;
-					transform: perspective(10cm) rotateX(-15deg) rotateY(30deg);
+					transform: perspective(10cm) rotateX(-15deg) rotateY(30deg) translateX(15px);
 					transition: all 0.5s;
 
-					&:hover{
-						transform: perspective(0cm) rotateX(0deg) rotateY(0deg) translateX(-100px);
+					span {
+						font-size: 4rem;
+						animation-name: hand-wave;
+						animation-duration: 2.5s;
+						animation-iteration-count: infinite;
+						transform-origin: 70% 70%;
+						display: inline-block;
 					}
 				}
 
 				p {
-					transform: perspective(10cm) rotateX(-15deg) rotateY(30deg);
+					transform: perspective(10cm) rotateX(-15deg) rotateY(30deg) translateX(20px);
 					transition: all 0.5s;
-
-					&:hover{
-						transform: perspective(0cm) rotateX(0deg) rotateY(0deg) translateX(100px);
-					}
 				}
 
 				a {
 					color: set-text-color($dark-color);
-					// transform: perspective(10cm) rotateX(-15deg) rotateY(30deg);
 					margin-top: 2rem;
 					transition: all 0.5s;
-
-					&:hover{
-						transform: perspective(0cm) rotateX(0deg) rotateY(0deg);
-					}
 				}
 			}
 		}
@@ -183,7 +179,6 @@
 			display: grid;
 			grid-template-areas: 'bioimage bio bio';
 
-			// Grid Area
 			.bio-image {
 				grid-area: bioimage;
 				width: 100%;
@@ -192,7 +187,7 @@
 				max-height: 275px;
 				border-top-left-radius: 1rem;
 				border-bottom-left-radius: 1rem;
-				box-shadow: -10px 10px 10px $dark-color;
+				box-shadow: -1rem 1rem 1rem $dark-color;
 			}
 			.bio {
 				height: 100%;
@@ -202,7 +197,7 @@
 				padding: 0.5rem;
 				border-top-right-radius: 1rem;
 				border-bottom-right-radius: 1rem;
-				box-shadow: 10px -10px 10px $dark-color;
+				box-shadow: 1rem -1rem 1rem $dark-color;
 
 				ul {
 					height: 100%;
@@ -248,13 +243,18 @@
 				}
 			}
 		}
-		h2 {
-			text-align: center;
-			font-size: 3rem;
-			letter-spacing: 2px;
-			margin-bottom: 0;
-			font-family: $font-stack-h;
-			font-weight: 300;
+
+		div.bg-main {
+
+			h2 {
+				text-align: center;
+				font-size: 3rem;
+				letter-spacing: 2px;
+				margin-bottom: 0;
+				font-family: $font-stack-h;
+				font-weight: 300;
+				padding: 1rem;
+			}
 		}
 	}
 	&-me-c {
@@ -325,21 +325,15 @@
 
 		.text-fields {
 			display: grid;
-			grid-template-areas: 'name email' 'subject phone' 'message message';
+			grid-template-areas: 'name email' 'message message';
 			grid-gap: 1.5rem;
 			margin-bottom: 2rem;
-			// Grid Areas
+			
 			.name-input {
 				grid-area: name;
 			}
 			.subject-input {
 				grid-area: subject;
-			}
-			.email-input {
-				grid-area: email;
-			}
-			.phone-input {
-				grid-area: phone;
 			}
 			.message-input {
 				grid-area: message;
@@ -363,9 +357,14 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			text-align: center;
+
 			i {
 				font-size: 3rem;
 				margin-bottom: 1rem;
+			}
+
+			.bottom-line {
+				display: none;
 			}
 		}
 	}
@@ -378,6 +377,7 @@
 			letter-spacing: 2px;
 			font-family: $font-stack-h;
 			font-weight: 300;
+			padding: 1rem;
 		}
 	}
 }
