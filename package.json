@@ -4,18 +4,16 @@
   "description": "portfolio_website_00",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "build": "npm run sass"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomaszplewka/00_portfolio_00.git"
   },
   "keywords": [
-    "html",
-    "css",
-    "sass",
-    "portfolio"
+    "portolio",
+    "projects",
+    "self-development"
   ],
   "author": "Tomasz Plewka",
   "license": "ISC",
@@ -24,7 +22,6 @@
   },
   "homepage": "https://github.com/tomaszplewka/00_portfolio_00#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1"
   },
   "devDependencies": {
     "node-sass": "^5.0.0"
