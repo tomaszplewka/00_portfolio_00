@@ -348,7 +348,9 @@
 		}
 
 		.text-fields + div {
-			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-content: center;
 		}
 
 		button[type='submit'] {
