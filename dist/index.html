@@ -363,12 +363,13 @@
         <h2 class="title-section">Contact Me</h2>
         <div class="bottom-line"></div>
         <p class="lead">Feel free to contact me any time!</p>
-        <form method="POST" data-netlify="true" name="contact-form">
+        <form method="POST" data-netlify="true" name="contact-form" data-netlify-recaptcha="true">
           <div class="text-fields">
             <input type="text" class="text-input name-input" placeholder="Name*" name="name" required />
             <input type="tel" class="text-input email-input" placeholder="Email Address*" name="email" required />
             <textarea class="text-input message-input" placeholder="Message*" name="message" required></textarea>
           </div>
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit" class="btn-dark">Submit</button>
         </form>
       </div>
