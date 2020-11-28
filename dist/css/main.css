@@ -513,8 +513,11 @@ input[class^="btn-"]:hover {
       font-size: 1.5rem;
       letter-spacing: 2px;
       resize: none; }
+  #contact-a .text-fields + div {
+    margin: auto; }
   #contact-a button[type='submit'] {
-    width: 50%; }
+    width: 50%;
+    margin-top: 2rem; }
 
 #contact-b {
   margin-left: 150px; }

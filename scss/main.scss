@@ -346,8 +346,14 @@
 				resize: none;
 			}
 		}
+
+		.text-fields + div {
+			margin: auto;
+		}
+
 		button[type='submit'] {
 			width: 50%;
+			margin-top: 2rem;
 		}
 	}
 	&-b {
